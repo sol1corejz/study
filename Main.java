@@ -2,7 +2,6 @@ package com.company;
 
 /**
  * Homework 1 CROC
- * @version 1
  * @author Parunov Ilya
  */
 
