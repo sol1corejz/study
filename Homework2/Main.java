@@ -21,17 +21,18 @@ public class Main {
         RecordingDevice VinSongs = new VinylTurntable(song3);
         RecordingDevice MltMdSongs = new Multimedia(song1, song2, song3);
 
-        //Создаем 4 пелейлиста и сразу проигрываем их(Результат выводится в консоль)
+        //Создаем пелейлисты для каждого устройства
         SDPlayer playList1 = new SDPlayer();
+        VinylPlayer playList2 = new VinylPlayer();
+        MultimediaPlayer playList3 = new MultimediaPlayer();
+
+        //проигрываем плейлисты(Результат выводится в консоль)
         playList1.play(SDSongs);
 
-        VinylPlayer playList2 = new VinylPlayer();
         playList2.play(VinSongs);
 
-        VinylPlayer playList3 = new VinylPlayer();
-        playList3.play(SDSongs);
+        playList2.play(SDSongs);
 
-        MultimediaPlayer playList4 = new MultimediaPlayer();
-        playList4.play(MltMdSongs);
+        playList3.play(MltMdSongs);
     }
 }
