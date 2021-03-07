@@ -2,7 +2,7 @@ package com.company;
 
 import java.util.Objects;
 
-public class AudioDevice {
+abstract public class AudioDevice {
 
     protected String type = "";
     protected Music song;
@@ -11,7 +11,7 @@ public class AudioDevice {
         this.type = type;
         this.song = song;
     }
-     void playOn(String type){};
+     abstract void playOn(String type);
 
     @Override
     public boolean equals(Object o) {
