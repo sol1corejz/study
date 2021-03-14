@@ -1,27 +1,27 @@
 package com.company;
 
-/**
- * Homework 1 CROC
- * @author Parunov Ilya
- */
-
 public class Main {
 
     public static void main(String[] args) {
+        ChessboardPositions x = new ChessboardPositions();
+        ChessboardPositions y = new ChessboardPositions();
+        try{
+            x = new ChessboardPositions(1, 1);
+            System.out.println(x.toString());
 
-        for (int i = 1; i < 101; i++){
-            if (i % 3 == 0 && i % 5 == 0){
-                System.out.println("FizzBuzz");
-            }
-            else if (i % 3 == 0){
-                System.out.println("Fizz");
-            }
-            else if (i % 5 == 0){
-                System.out.println("Buzz");
-            }
-            else{
-                System.out.println(i);
-            }
+            x.setX(7);
+            System.out.println(x.toString());
+
+        }catch (Exception e){
+            System.out.println(e);
         }
+
+        try{
+            y = new ChessboardPositions(9, 8);
+            System.out.println(y.toString());
+        }catch (Exception e){
+            System.out.println(e);
+        }
+
     }
 }
