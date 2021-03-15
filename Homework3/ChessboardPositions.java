@@ -7,7 +7,7 @@ public class ChessboardPositions {
     private int x;
     private int y;
 
-    public ChessboardPositions(int x, int y) throws IllegalArgumentException {
+    ChessboardPositions(int x, int y) throws IllegalArgumentException {
 
             if (x >= 0 && x < 8 && y >= 0 && y < 8){
                 this.x = x;
@@ -18,7 +18,7 @@ public class ChessboardPositions {
             }
     }
 
-    public ChessboardPositions(){
+    ChessboardPositions(){
         this.x = 0;
         this.y = 0;
     }
