@@ -10,9 +10,11 @@ public class MatchThreads extends Thread {
     public void run() {
         while (globalPos < Main.INPUT_STRING.length()) {
             synchronized (lock){
+                if (globalPos >= Main.INPUT_STRING.length()){
+                    break;
+                }
                 localPos = globalPos;
                 globalPos++;
-                System.out.println(localPos);
             }
             if (Matcher.match(String.valueOf(Main.INPUT_STRING.charAt(localPos)), Main.TEMPLATE)) {
                 Main.sum++;
