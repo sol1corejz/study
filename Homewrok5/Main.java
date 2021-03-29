@@ -30,9 +30,9 @@ public class Main {
      * @param args аргументы командной строки.
      */
     public static void main(String[] args) throws InterruptedException {
-        MatchThreads[] matchers = new MatchThreads[5];
+        MatchThreads[] matchers = new MatchThreads[20];
 
-        for (int i = 0; i < 5; i++){
+        for (int i = 0; i < matchers.length; i++){
             matchers[i] = new MatchThreads();
         }
 
