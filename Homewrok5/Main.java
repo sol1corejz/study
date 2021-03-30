@@ -1,14 +1,12 @@
 package com.company;
 
-/**
- * Homework 5
- * @version 1
- * @author Parunov Ilya
- */
+import java.util.ArrayList;
+import java.util.List;
+import java.util.concurrent.*;
+import java.util.concurrent.atomic.AtomicInteger;
 
 public class Main {
-
-    public volatile static int sum = 0;
+    private static final AtomicInteger sum = new AtomicInteger(0);
 
     /**
      * Пример входной строки.
@@ -29,23 +27,28 @@ public class Main {
      *
      * @param args аргументы командной строки.
      */
-    public static void main(String[] args) throws InterruptedException {
-        MatchThreads[] matchers = new MatchThreads[5];
-
-        for (int i = 0; i < 5; i++){
-            matchers[i] = new MatchThreads();
-        }
+    public static void main(String[] args) throws Exception{
 
         long current = System.currentTimeMillis();
-        for (MatchThreads x: matchers){
-            x.start();
-        }
-        for (MatchThreads x: matchers){
-            //flag  чтобы отслдеживать выполнение и замерить время
-            while (!x.flag){}
+
+        ExecutorService es = Executors.newFixedThreadPool(20);
+        List<Future> tasks = new ArrayList<>();
+
+        for (int i = 0; i < INPUT_STRING.length(); i++) {
+            int pos = i;
+            tasks.add(es.submit(() -> {
+                if (Matcher.match(String.valueOf(INPUT_STRING.charAt(pos)), TEMPLATE)) {
+                    sum.getAndIncrement();
+                }
+            }));
         }
 
-        System.out.println("Time: " + (System.currentTimeMillis() - current) / 1000 + " c.");
+        for (Future f : tasks){
+            f.get();
+        }
+        es.shutdown();
+
         System.out.println("Count of space: " + sum);
+        System.out.println("Time: " + (System.currentTimeMillis() - current) / 1000 + " c.");
     }
 }
