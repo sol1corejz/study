@@ -1,0 +1,10 @@
+1 Kennedy John
+2 Lincoln Abraham
+3 Reagan Ronald
+4 Trump Donald
+5 Franklin Benjamin
+6 Washington George
+7 Grant Ulysses
+8 Obama Barack
+9 George Bush
+10 Theodore Roosevelt
