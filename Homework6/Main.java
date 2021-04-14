@@ -13,14 +13,12 @@ public class Main {
     public static String normalizeDir(String dir){
 
         String[] splitStr = dir.split("/");//Разделяем строку и записываем её в массив
-        List<String> res = new ArrayList<>();//Лист для строки без точек
-        List<String> resF = new ArrayList<>();//Дополнительный лист для обработанной строки
-        String disban = "";//Строка для сохранения неизвестных корневых путей
+        Stack<String> res = new Stack<>();//Лист для строки без точек
+        Stack<String> resF = new Stack<>();//Дополнительный лист для обработанной строки
+        StringBuilder disban = new StringBuilder();//Строка для сохранения неизвестных корневых путей
 
         //Записываем строку как есть в первый лист
-        for (int i = 0; i < splitStr.length; i++) {
-            res.add(splitStr[i]);
-        }
+        res.addAll(Arrays.asList(splitStr));
 
         //Создаем итератор  и удаляем все точки из нашего листа
         ListIterator<String> it = res.listIterator();
@@ -39,18 +37,16 @@ public class Main {
                 } else resF.add(cur);
 
             } catch (IndexOutOfBoundsException e) {
-                disban += "../";
+                disban.append("../");
             }
         }
         //Записываем результат в строку
-        String result = "";
-        for (int i = 0; i < resF.size(); i++) {
-            result += resF.get(i) + "/";
+        StringBuilder result = new StringBuilder();
+        for (String s : resF) {
+            result.append(s).append("/");
         }
 
-        String finalString = disban + result;//Добавляем утерянные при нормализации неизвестные корневые пути
-
-        return finalString;
+        return disban + result.toString().substring(0,result.length()-1);
     }
 
     public static void main(String[] args) {
