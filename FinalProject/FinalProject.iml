@@ -7,5 +7,9 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" name="javax.activation-1.2.0" level="project" />
+    <orderEntry type="library" name="jaxb-api-2.3.0" level="project" />
+    <orderEntry type="library" name="jaxb-core-2.3.0" level="project" />
+    <orderEntry type="library" name="jaxb-impl-2.3.0" level="project" />
   </component>
 </module>

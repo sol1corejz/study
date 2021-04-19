@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<TopSellers>
+    <TopSeller>
+        <place>1</place>
+        <name>Bush George</name>
+    </TopSeller>
+    <TopSeller>
+        <place>2</place>
+        <name>Trump Donald</name>
+    </TopSeller>
+    <TopSeller>
+        <place>3</place>
+        <name>Franklin Benjamin</name>
+    </TopSeller>
+    <TopSeller>
+        <place>4</place>
+        <name>Kennedy John</name>
+    </TopSeller>
+    <TopSeller>
+        <place>5</place>
+        <name>Grant Ulysses</name>
+    </TopSeller>
+</TopSellers>

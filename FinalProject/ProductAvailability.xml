@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<availabilities>
+    <availability>
+        <sellerid>1</sellerid>
+        <productid>1</productid>
+        <price>5$</price>
+        <amount>10</amount>
+    </availability>
+    <availability>
+        <sellerid>1</sellerid>
+        <productid>3</productid>
+        <price>10$</price>
+        <amount>5</amount>
+    </availability>
+    <availability>
+        <sellerid>2</sellerid>
+        <productid>2</productid>
+        <price>35$</price>
+        <amount>25</amount>
+    </availability>
+    <availability>
+        <sellerid>3</sellerid>
+        <productid>4</productid>
+        <price>15$</price>
+        <amount>14</amount>
+    </availability>
+    <availability>
+        <sellerid>4</sellerid>
+        <productid>2</productid>
+        <price>34$</price>
+        <amount>20</amount>
+    </availability>
+</availabilities>

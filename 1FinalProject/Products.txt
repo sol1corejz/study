@@ -1,4 +1,0 @@
-1 Milk
-2 Meat
-3 Eggs
-4 Fruits

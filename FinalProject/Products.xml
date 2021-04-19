@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<products>
+    <product>
+        <id>1</id>
+        <name>Milk</name>
+    </product>
+    <product>
+        <id>2</id>
+        <name>Meat</name>
+    </product>
+    <product>
+        <id>3</id>
+        <name>Eggs</name>
+    </product>
+    <product>
+        <id>4</id>
+        <name>Fruits</name>
+    </product>
+</products>
